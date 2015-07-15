@@ -47,9 +47,11 @@ Building and running Wiki changes topology
 1.	Building Storm project
 Extract the code from the zip into a folder. I extracted the code to c:\repos\ wiki-recent-changes. Open a command prompt and change director into above folder. Then issue the following command to build the project using Maven build system.
        >mvn clean install
+
 2.	Running storm topology
 If the build is successful, then run the following command to execute the topology
 ➢	storm jar target\wiki-recent-changes-1.0-SNAPSHOT-jar-with-dependencies.jar emse.rts.summer_2015.wiki_changes.WikiRecentChangesTopology
+
 3.	Start Redis server
 Make sure that Redis_Home is set properly as described earlier. Then issue following command on the command prompt
         >redis-server
