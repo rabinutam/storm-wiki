@@ -5,25 +5,33 @@ Analyze wiki stream using Storm, and present the result in a browser.
 Project Setup 
 
 This document describes the project setup requirements like pre-requisite, environment and instructions to run the project.
+
 1.	Install Java
 Download and install a JDK (Storm works with both Oracle and OpenJDK 6/7). For this setup I used JDK 7 from Oracle. I installed Java in: C:\Java\jdk1.7.0_45\
+
 2.	Install Storm
 Download and install Apache Storm from https://storm.apache.org/downloads.html. I installed storm in C:\Storm_Home\apache-storm-0.9.4
+
 3.	Install Maven
 Install Maven from http://maven.apache.org/download.cgi. I installed maven in folder C:\MAVEN_HOME\apache-maven-3.3.3
+
 4.	Install Redis for Windows
 Install Redis for windows from https://github.com/MSOpenTech/Redis. I installed Redis in folder C:\redis_home\Redis-64.2.8.19
+
 5.	Install Apache ANT
 Install the Apache ant build system from http://ant.apache.org/bindownload.cgi. I installed the apache ant in folder C:\apache-ant.
+
 6.	Install Socket.IO – Client for Java
 Install the socket.io client for Java from https://github.com/Gottox/socket.io-java-client. 
 Create a folder from command prompt and change directory into that. Checkout and compile the project:
 git clone git://github.com/Gottox/socket.io-java-client.git
 cd socket.io-java-client
 ant jar
+
 7.	Install Socket.IO – Client for Java in Maven repository
 Start a command prompt and issue following command 
 mvn install:install-file -Dfile="Jar file path for socket.io client" -DgroupId=gottox -DartifactId=socket_io_client -Dversion=1.0.0 -Dpackaging=jar
+
 8.	Configure Environment Variables
 On Windows Storm requires the STORM_HOME and JAVA_HOME environment variables to be set, as well as some additions to the PATH variable:
 JAVA_HOME = C:\Java\jdk1.7.0_45\
@@ -32,6 +40,7 @@ REDIS_HOME = C:\redis_home\Redis-64.2.8.19
 ANT_HOME=C:\apache-ant\apache-ant-1.9.5
 PATH Add:
 %STORM_HOME%\bin;%JAVA_HOME%\bin; C:\MAVEN_HOME\apache-maven-3.3.3;%REDIS_HOME%;%ANT_HOME%\bin;
+
 
 Building and running Wiki changes topology
 
@@ -45,6 +54,8 @@ If the build is successful, then run the following command to execute the topolo
 Make sure that Redis_Home is set properly as described earlier. Then issue following command on the command prompt
         >redis-server
 This will start the Redis server. Now the topology can send the change count to the channel for broadcast.
+
+
 Presentation Side Setup
 
 1. Install Node
