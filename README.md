@@ -44,44 +44,46 @@ PATH Add:
 
 Building and running Wiki changes topology
 
-1.	Building Storm project
+1. Building Storm project
 Extract the code from the zip into a folder. I extracted the code to c:\repos\ wiki-recent-changes. Open a command prompt and change director into above folder. Then issue the following command to build the project using Maven build system.
-       >mvn clean install
+>mvn clean install
 
-2.	Running storm topology
+2. Running storm topology<br>
 If the build is successful, then run the following command to execute the topology
-➢	storm jar target\wiki-recent-changes-1.0-SNAPSHOT-jar-with-dependencies.jar emse.rts.summer_2015.wiki_changes.WikiRecentChangesTopology
+>storm jar target\wiki-recent-changes-1.0-SNAPSHOT-jar-with-dependencies.jar emse.rts.summer_2015.wiki_changes.WikiRecentChangesTopology
 
-3.	Start Redis server
+3. Start Redis server<br>
 Make sure that Redis_Home is set properly as described earlier. Then issue following command on the command prompt
-        >redis-server
+>redis-server
 This will start the Redis server. Now the topology can send the change count to the channel for broadcast.
 
 
-Presentation Side Setup
+<br>
+<b>Presentation Side Setup</b>
+<br>
 
-1. Install Node
+1. Install Node<br>
 https://nodejs.org/download/
 Node comes with npm installed
 
-2. Node components
+2. Node components<br>
 Node components are already installed and are inside ClientSide/node_modules directory.
 If node components are not there, run as root:
 [this installs npm components listed in package.json]
 >npm install
 
-3. Bower components
+3. Bower components<br>
 Bower Components are already installed and are inside ClientSide/bower_components directory
 If bower components are not there, firs install bower
 >npm install –g bower
-and installs bower components, listed in bower.json
+<br>and installs bower components, listed in bower.json
 >bower install
 
-Running Application Website
+<b>Running Application Website</b><br>
 
-1. Run node server, in dir ClientSide
+1. Run node server, in dir ClientSide<br>
 >node server.js
 
-2. Open application site
-http://127.0.0.1:3000/
+2. Open application site<br>
+http://127.0.0.1:3000/<br>
 http://localhost:3000/
