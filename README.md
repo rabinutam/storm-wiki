@@ -67,18 +67,20 @@ Node comes with npm installed
 2. Node components
 Node components are already installed and are inside ClientSide/node_modules directory.
 If node components are not there, run as root:
-$ npm install [this installs npm components listed in package.json]
+[this installs npm components listed in package.json]
+>npm install
 
 3. Bower components
 Bower Components are already installed and are inside ClientSide/bower_components directory
-If bower components are not there, run
-$ npm install –g bower [this installs bower]
-$ bower install   [this installs bower components, listed in bower.json]
+If bower components are not there, firs install bower
+>npm install –g bower
+and installs bower components, listed in bower.json
+>bower install
 
 Running Application Website
 
 1. Run node server, in dir ClientSide
-$ node server.js
+>node server.js
 
 2. Open application site
 http://127.0.0.1:3000/
