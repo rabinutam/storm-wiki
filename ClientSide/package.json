@@ -1,0 +1,15 @@
+{
+  "name": "rts",
+  "version": "0.0.1",
+  "description": "Real Time System Wiki App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haitham, Niranjan, Prabin, Raza",
+  "dependencies": {
+    "express": "^4.12.4",
+    "redis": "^0.12.1",
+    "socket.io": "^1.3.5"
+  }
+}
